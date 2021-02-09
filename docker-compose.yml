@@ -1,6 +1,7 @@
 version: '3'
-service: client-runner
-  image: ubuntu:20.04
-  volumes:
-    - .:/host-base:/rw
-  command: touch /host-base/x ; tail -f /dev/null
+services:
+  client-runner:
+    build:
+      context: .
+    volumes:
+      - .:/host-base:rw
