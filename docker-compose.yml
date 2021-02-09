@@ -1,6 +1,7 @@
 version: '3'
 services:
   client-runner:
+    env_file: client-runner.env
     build:
       context: .
     volumes:
